@@ -11,6 +11,25 @@ The macOS app source remains in the separate private `dnorman/claude-desktop-swi
 - GitHub Releases: signed, notarized universal DMGs, published by the app's CI.
 - Homebrew cask: `synestheticsystems/homebrew-tap`, generated from the finished DMG's SHA-256.
 
+## Local development
+
+Run `./dev.sh` from this checkout. It serves `dist/` directly on loopback and prints
+the URL. Edits appear on browser refresh; there is no build step or package install.
+Python 3 and curl are required. The server runs in the background with a sticky,
+automatically selected port; `PORT=12345 ./dev.sh` selects an explicit free port.
+
+Use `./dev.sh --status`, `--logs`, `--restart`, or `--stop` to manage it.
+The runner follows the same Sutra contract as `synesthetic.systems`: a path-hashed
+entry in `~/.dev-runner/`, a supervisor PID, `WEB_PORT`, and atomic `web.status`
+updates. Sutra's stop action terminates the owned server group and clears the entry.
+Local logs, selected ports, and launch locks are ignored by Git.
+`python3 scripts/test-dev-runner.py` checks start/stop, idempotence, sticky ports,
+Sutra SIGTERM cleanup, child failure, stale-process recovery, and port validation
+using disposable checkouts and a separate registry.
+
+No ChatGPT hosting, preview tunnels, or OpenAI deployment helpers are used for
+development or publication. GitHub Pages is the only public hosting path.
+
 Run `python3 scripts/check-site.py` and `node scripts/test-release.mjs` before deployment.
 Pushes to `main` publish automatically after checks pass. Pull requests only run checks.
 No credentials belong in this repository; Pages uses GitHub's scoped workflow identity.
@@ -32,6 +51,5 @@ GitHub Pages' published A records. Keep HTTPS enforcement enabled after the
 certificate is issued. `dist/CNAME` documents the domain; Actions-based Pages
 uses the repository's Pages setting, not that file, as the authoritative binding.
 
-An earlier preview used OpenAI Sites project
-`appgprj_6ae4ee7e95bc8191a044d6edb4a6a01b`; it is not the production hosting path.
-Do not recreate that project or reintroduce its repository credentials.
+An earlier OpenAI Sites preview is retired. Do not recreate it or reintroduce its
+repository credentials, hosting configuration, or preview workflow.

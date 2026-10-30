@@ -1,3 +1,7 @@
 .DS_Store
 .site-preview.pid
 *.tar.gz
+.dev-log
+.dev-ports
+.dev-start-lock/
+__pycache__/

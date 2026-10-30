@@ -19,6 +19,7 @@ jobs:
       - run: python3 scripts/check-site.py
       - run: node --check dist/release.js
       - run: node scripts/test-release.mjs
+      - run: python3 scripts/test-dev-runner.py
       - uses: actions/configure-pages@v5
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v4
