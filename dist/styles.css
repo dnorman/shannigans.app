@@ -34,7 +34,7 @@ p, li, h1, h2, h3, code { overflow-wrap: break-word; }
 nav { display: flex; gap: 26px; align-items: center; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
 nav a { text-decoration: none; }
 nav a:hover { text-decoration: underline; }
-.hero { position: relative; isolation: isolate; overflow: hidden; height: calc(100svh - 142px); min-height: 540px; max-height: 940px; }
+.hero { position: relative; isolation: isolate; overflow: hidden; background: #d2eedd; height: calc(100svh - 142px); min-height: 540px; max-height: 940px; }
 .hero-art { position: absolute; z-index: -1; inset: 0 0 0 auto; width: min(100%, 1900px); height: 100%; object-fit: cover; object-position: right center; }
 .hero-inner { max-width: 1440px; height: 100%; margin: auto; padding: 48px; display: flex; align-items: center; }
 .hero-copy { width: 43%; padding-bottom: 22px; }
