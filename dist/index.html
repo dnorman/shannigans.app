@@ -3,63 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A small macOS utility for your several Claude accounts. See usage, switch deliberately, and carry local Code conversations forward. By Synesthetic Systems.">
-  <meta name="theme-color" content="#d9f774">
-  <title>Claude Account Switcher | Synesthetic Systems</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23d9f774'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='44'%3E%21%3C/text%3E%3C/svg%3E">
+  <title>Claude Shannigans | Claude Desktop account switcher for Mac</title>
+  <meta name="description" content="Switch Claude Desktop accounts without abandoning your local Code conversations. Session and weekly usage, saved logins, and a little less account aerobics. For Mac.">
+  <link rel="canonical" href="https://shannigans.app/">
+  <meta property="og:title" content="Claude Shannigans">
+  <meta property="og:description" content="Several accounts. One train of thought. A Claude Desktop account switcher for Mac.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shannigans.app/">
+  <meta property="og:image" content="https://shannigans.app/assets/accounts-preview.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/shannon.png">
+  <script src="release.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="wordmark" href="./" aria-label="Synesthetic Systems account switcher home"><span class="mark" aria-hidden="true">S!</span><span>Synesthetic<br>Systems</span></a>
-    <nav aria-label="Main navigation"><a href="#the-trick">The trick</a><a href="#fine-print">Fine print</a><a class="nav-action" href="#availability">Get the app <span aria-hidden="true">↗</span></a></nav>
-  </header>
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">A small Mac app for a very specific predicament.</p>
-        <h1 id="hero-title">Claude Account<br>Switcher</h1>
-        <p class="lede">Several accounts. One train of thought.<br>Less logging out. More getting on with it.</p>
-        <div class="hero-actions"><a class="button dark" href="#availability">Meet your next account <span aria-hidden="true">↓</span></a><a class="text-link" href="#the-trick">What's the trick?</a></div>
-        <p class="hero-note">Native macOS · Your accounts · Your call</p>
-      </div>
-      <img class="product-image" src="assets/accounts-preview.png" width="840" height="438" alt="The Mac app showing three example accounts with session usage, weekly usage, reset times, and a Next button.">
-      <p class="image-caption">Actual app. Example accounts. No elaborate dashboard cosplay.</p>
-    </section>
-    <section class="punchline"><div class="wrap"><p>Your brilliant idea did not run out.<br><span>Your account did.</span></p><span class="aside">An important distinction.</span></div></section>
-    <section class="features wrap" id="the-trick" aria-labelledby="trick-title">
-      <div class="section-intro"><p class="eyebrow">Here's the whole operation</p><h2 id="trick-title">A little less<br>account aerobics.</h2><p>You already have the accounts. This keeps the administrative interpretive dance to a minimum.</p></div>
-      <div class="feature-list">
-        <article><span class="index">01</span><div><h3>Know which tank is empty.</h3><p>Session used. Weekly used. When the week resets. Right there in your menu bar and account list. Percentages mean <em>used</em>, because words should mean things.</p></div></article>
-        <article><span class="index">02</span><div><h3>Pick the next account. Keep the thread.</h3><p>Switch saved logins and carry your local Claude Code conversations forward. No ceremonial logout-login-log-out-again shuffle.</p></div></article>
-        <article><span class="index">03</span><div><h3>You decide when.</h3><p>A red number is not a command. Nothing switches behind your back at 100%. When you're ready, choose an account or let <strong>Next</strong> choose an eligible one.</p></div></article>
-      </div>
-    </section>
-    <section class="workflow" aria-labelledby="workflow-title"><div class="wrap">
-      <div class="section-top"><p class="eyebrow">Deliberate, not dramatic</p><h2 id="workflow-title">The actual switch.</h2></div>
-      <ol class="steps"><li><span>01 / READY?</span><h3>Finish the important bit.</h3><p>Let active agents finish or stop them yourself. Switching closes Claude; it's not an invisible hot-swap.</p></li><li><span>02 / CLICK.</span><h3>Choose your next account.</h3><p>The app asks Claude to quit gracefully, backs up session changes, and activates the saved profile.</p></li><li><span>03 / CARRY ON.</span><h3>Claude opens again.</h3><p>Your selected login is ready. Reopen the local Code session you were working on and continue.</p></li></ol>
-      <p class="workflow-foot">First time with an account? Sign in through Claude itself. We do not need another password box in this world.</p>
-    </div></section>
-    <section class="fine-print wrap" id="fine-print" aria-labelledby="fine-title">
-      <div class="section-intro"><p class="eyebrow">The load-bearing fine print</p><h2 id="fine-title">Useful.<br>Not sorcery.</h2><p>We like tiny utilities. We also like telling you what they actually do.</p></div>
-      <div class="questions">
-        <details open><summary>Does this manufacture more tokens?</summary><p>No. It switches between accounts you already have. Each account keeps its own subscription, limits, and service terms. There is no limit bypass hiding under a tiny hat.</p></details>
-        <details><summary>Does everything follow me?</summary><p>Local Claude Code conversations and their workspace state are the focus. Cloud Chat and Cowork history, cloud artifacts, sidebar groups, and scheduled tasks stay with their original account. This is not a whole-account migration tool.</p></details>
-        <details><summary>Does it copy a mountain of files every time?</summary><p>No. The direct edition keeps large local session and runtime directories in stable shared locations. Switching rotates saved profiles and synchronizes account-specific session metadata. Backups keep the last five by default, with a configurable limit.</p></details>
-        <details><summary>Why might macOS ask for my password?</summary><p>Optional live usage checks need access to Claude's encrypted login cookies. macOS may ask for your login Keychain password, entered only in its own dialog. The app explains this first. Always Allow remembers permission; Allow Once can mean more prompts.</p><p>Those cookies are full login credentials, not usage-only tokens. They stay in memory while being used and are sent only to Claude. Background checks never trigger password prompts.</p></details>
-        <details><summary>Is this an official Claude app?</summary><p>No. This is an independent utility from Synesthetic Systems, unaffiliated with Anthropic. Claude is Anthropic's product. The switcher relies on undocumented local storage and web endpoints, so upstream changes can break things.</p></details>
-        <details><summary>Mac App Store or direct download?</summary><p>The working app is the direct edition. A more limited, sandboxed edition is being investigated; it is not approved for or available on the Mac App Store. The editions will be described openly, not disguised as one another.</p></details>
-      </div>
-    </section>
-    <section class="availability" id="availability" aria-labelledby="availability-title"><div class="wrap">
-      <span class="status"><span aria-hidden="true"></span> In development</span>
-      <h2 id="availability-title">Small app.<br>Disproportionate relief.</h2>
-      <p>The app exists. The public release is still getting its shoes on.<br>No download yet, and no mysterious email list to join.</p>
-      <a class="button dark" href="https://namingspaces.app/" target="_blank" rel="noopener noreferrer">Meet its sibling, Naming Spaces <span aria-hidden="true">↗</span></a>
-      <p class="release-note">macOS 13 or later · Public release and final name pending</p>
-    </div></section>
-  </main>
-  <footer class="wrap"><p>© 2026 Synesthetic Systems LLC</p><div><a href="privacy.html">Privacy</a><a href="#fine-print">Help &amp; caveats</a><a href="https://namingspaces.app/">Naming Spaces ↗</a></div><p class="disclaimer">Independent software. Not affiliated with or endorsed by Anthropic.</p></footer>
-</body>
-</html>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="./">Claude Shannigans<span>by Synesthetic Systems</span></a><nav aria-label="Main navigation"><a href="help.html">Help</a><a href="#install">Get the app <span aria-hidden="true">↗</span></a></nav></header>
+<main id="main">
+  <section class="hero" aria-labelledby="title">
+    <div class="hero-copy"><p class="eyebrow">A Claude Desktop account switcher. For Mac.</p><div class="hero-brand"><img src="assets/shannon.png" alt="An illustrated Claude Shannon juggling a zero and a one." width="106" height="106"><h1 id="title">Claude Shannigans</h1></div><p class="lede">Your brilliant idea did not run out.<br>Your account did.</p><div class="hero-actions"><a class="button dark" href="#install">Get Shannigans <span aria-hidden="true">↓</span></a><a class="text-link" href="#how">What happens when I switch?</a></div></div>
+    <figure class="product"><img src="assets/accounts-preview.png" alt="The native account menu showing example email addresses, session and weekly percentages used, reset times, and a Next button."><figcaption>The actual Mac app. Example accounts. No imaginary dashboard.</figcaption></figure>
+  </section>
+  <section class="punchline"><div class="wrap"><h2>Several accounts.<br><span>One train of thought.</span></h2><p>For when “come back in five hours”<br>is not the next step in your plan.</p></div></section>
+  <section class="features wrap" aria-labelledby="features-title"><div class="section-intro"><p class="eyebrow">Less account aerobics</p><h2 id="features-title">The switch.<br>Without the<br>whole circus.</h2><p>You already have the accounts. Shannigans keeps the local work moving between them.</p></div><div class="feature-list">
+    <article><span class="index">01</span><div><h3>Know which account has room.</h3><p>Session used. Weekly used. When the week resets. Right in your menu bar, for every saved account. No mental subtraction required.</p></div></article>
+    <article><span class="index">02</span><div><h3>Bring the conversation.</h3><p>Your local Claude Code conversations follow the switch. Shared session data stays put; account-specific metadata is synchronized. Not another giant copy of everything.</p></div></article>
+    <article><span class="index">03</span><div><h3>Click Next. Keep the thought.</h3><p>Next chooses the most-used eligible alternate that still has session and weekly quota. Or pick an email yourself. No automatic mid-agent ambush.</p></div></article>
+  </div></section>
+  <section id="how" class="workflow"><div class="wrap"><p class="eyebrow">You are still in charge</p><h2>A short intermission.</h2><ol class="steps"><li><span>FIRST</span><h3>Finish the important bit.</h3><p>Let running agents finish, or stop them yourself. Switching closes Claude. A running job is not a relay baton.</p></li><li><span>THEN</span><h3>Choose an account.</h3><p>Shannigans asks Claude to quit gracefully, saves a session backup, activates the selected login, and reopens Claude.</p></li><li><span>AND</span><h3>Pick up the thread.</h3><p>Open the local Code conversation and resume. Same train of thought. Different account footing the token bill.</p></li></ol><p class="workflow-foot">Claude won't quit? The switch stops. No force-kill. No “probably fine.” <a href="help.html#switch">Read the switching guide</a>.</p></div></section>
+  <section class="fine-print wrap" aria-labelledby="fine-title"><div class="section-intro"><p class="eyebrow">Load-bearing fine print</p><h2 id="fine-title">Shannigans.<br>Not magic.</h2><p>Useful software comes with edges. Here are ours.</p></div><div class="questions">
+    <details><summary>Does this give me more quota?</summary><p>No. You need your own Claude accounts and subscriptions. Shannigans does not create accounts, alter limits, or promise that an account will remain eligible. Use it in accordance with your provider's terms.</p></details>
+    <details><summary>Do all my chats move?</summary><p>Local Code conversations are the point. Cloud Chat, Cowork, artifacts, sidebar groups, and scheduled-task registrations stay with their original account. This is not a cloud-account merger.</p></details>
+    <details><summary>Why might macOS ask for my password?</summary><p>Optional live usage checks need access to Claude Desktop's encrypted login cookies through your Keychain. The app explains the prompt first. These are full login credentials, not usage-only tokens. <a href="help.html#keychain">Exactly what gets accessed, and why</a>.</p></details>
+    <details><summary>Will it switch at 100%?</summary><p>Only when you tell it to. Claude sometimes continues working after a usage reading reaches 100%. Shannigans never turns a percentage into an order to interrupt your agents.</p></details>
+    <details><summary>Is this an official Claude app?</summary><p>No. Claude Shannigans is independent software by Synesthetic Systems LLC, not affiliated with or endorsed by Anthropic. Claude belongs to Anthropic. The shannigans are ours.</p></details>
+    <details><summary>Mac App Store?</summary><p>This is the direct-download edition. It works with Claude's local profile files and optionally its login cookies. It is not an App Store app, and we make no claim of App Store approval.</p></details>
+  </div></section>
+  <section class="availability" id="install"><div class="wrap"><p class="eyebrow">Small app. Specific problem.</p><h2>Back to your<br>regularly scheduled idea.</h2><p data-release-status>For macOS 13 or later. Apple silicon and Intel.</p><p class="release-note" data-release-pending>The first public build is being prepared.<br>Downloads will appear here when the signed release is ready.</p><div class="download-actions"><a class="button dark" data-download hidden>Download for Mac <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/dnorman/shannigans.app/releases">Release notes &amp; downloads <span aria-hidden="true">↗</span></a></div><div class="brew" data-brew hidden><p>Or let Homebrew do the carrying:</p><div class="command"><code>brew install --cask synestheticsystems/tap/claude-shannigans</code><button type="button" data-copy aria-label="Copy Homebrew command" title="Copy Homebrew command"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></button></div><p class="copy-status" data-copy-status aria-live="polite"></p></div><p class="release-note">Already using the development app? <a href="help.html#upgrade">A quick note before upgrading.</a></p></div></section>
+</main>
+<footer class="wrap"><p>Copyright 2026 Synesthetic Systems LLC</p><nav aria-label="Footer"><a href="help.html">Help</a><a href="privacy.html">Privacy</a><a href="https://namingspaces.app/">Also: Naming Spaces</a></nav><p class="disclaimer">Independent software. Not affiliated with or endorsed by Anthropic.</p></footer>
+</body></html>
